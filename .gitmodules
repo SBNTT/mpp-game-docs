@@ -1,0 +1,3 @@
+[submodule "modules/mpp-game-math"]
+	path = modules/mpp-game-math
+	url = https://github.com/SBNTT/mpp-game-math.git
