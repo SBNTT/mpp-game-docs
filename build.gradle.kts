@@ -1,4 +1,5 @@
 import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.gradle.DokkaMultiModuleTask
 import org.jetbrains.dokka.Platform
 
 plugins {
@@ -12,6 +13,16 @@ repositories {
 
 kotlin {
     jvm()
+}
+
+tasks.withType<DokkaMultiModuleTask>().configureEach {
+    if (!name.contains("html", ignoreCase = true)) return@configureEach
+
+    val docs = projectDir.resolve("docs")
+    outputDirectory.set(docs)
+    doLast {
+        docs.resolve("-modules.html").renameTo(docs.resolve("index.html"))
+    }
 }
 
 subprojects {
