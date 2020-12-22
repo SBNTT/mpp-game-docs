@@ -1,5 +1,9 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 
-me.sbntt.mpp.math
+me.sbntt.mpp.math.extensions
+me.sbntt.mpp.math.extensions.comparators
+me.sbntt.mpp.math.units
+me.sbntt.mpp.math.units.abstracts
+me.sbntt.mpp.math.vectors
 
