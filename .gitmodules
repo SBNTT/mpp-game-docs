@@ -1,3 +1,6 @@
 [submodule "modules/mpp-game-math"]
 	path = modules/mpp-game-math
 	url = https://github.com/SBNTT/mpp-game-math.git
+[submodule "modules/mpp-game-bootstrap"]
+	path = modules/mpp-game-bootstrap
+	url = https://github.com/SBNTT/mpp-game-bootstrap.git
