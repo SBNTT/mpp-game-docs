@@ -7,5 +7,8 @@ pluginManagement {
 
 rootProject.name = "mpp-game-docs"
 
-include(":mpp-game-math")
-project(":mpp-game-math").projectDir = file("./modules/mpp-game-math")
+file("./modules").list()?.forEach {
+    if(!file("./modules/$it").isDirectory) return@forEach
+    include(":$it")
+    project(":$it").projectDir = file("./modules/$it")
+}
